@@ -1,0 +1,16 @@
+extend type Mutation {
+    save(input : OrderInput!): Order
+    delete(id: ID!): Order
+}
+
+extend type Query {
+    getOrder(id: ID!): Order!
+    getOrders(userId: ID, idList: [ID]): [Order]
+}
+
+input OrderInput {
+    id: ID
+    userId: ID!
+    itemId: ID!
+    amount: Int!
+}

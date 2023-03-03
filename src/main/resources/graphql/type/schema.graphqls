@@ -1,0 +1,28 @@
+type Mutation {
+}
+
+type Query {
+}
+
+type User {
+    id: ID!
+    email: String!
+    name: String!
+    age: Int!
+    orderList: [Order]
+}
+
+type Order {
+    id: ID!
+    user: User!
+    item: Item!
+    amount: Int!
+}
+
+type Item {
+    id: ID!
+    name: String!
+    category: String!
+    price: Int!
+    orderList: [Order]
+}

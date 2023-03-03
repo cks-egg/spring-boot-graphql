@@ -1,0 +1,9 @@
+extend type Mutation {
+    saveUser(id: ID!, email: String!, name: String!, age: Int!): User
+    deleteUser(id: ID!): User
+}
+
+extend type Query {
+    getUser(id: ID!): User
+    userList(idList: [ID]): [User]
+}
